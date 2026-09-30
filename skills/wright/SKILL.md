@@ -12,7 +12,7 @@ Wright is the semantic tooling for these projects: it parses, validates, lints, 
 
 - **Is it correct?** `check`. It is only the correctness gate: it passes code that will freeze a server, such as a `While(True)` with no `Wait`.
 - **Is it risky or expensive?** `lint` for stable-rule findings, `analyze` for element cost, hotspots, and shared state. Run these alongside `check`, before and after a change.
-- **What does this symbol or rule do, and what breaks if I change it?** `inspect` (symbols, refs, cfg, callgraph, cost) resolves by name and follows semantics where grep only matches text.
+- **What does this symbol or rule do, and what breaks if I change it?** `inspect` (symbols, refs, cfg, callgraph, cost) resolves by name and follows semantics where grep only matches text. It works on raw Workshop, not OPY (see the language notes).
 - **Many questions about one project?** `wright serve` loads it once.
 - **Need Workshop output, or OPY from raw Workshop?** `compile`, `convert`. `convert` reconstructs, it does not recover your source.
 
