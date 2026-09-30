@@ -1,12 +1,12 @@
 ---
 name: overpy
-description: Use when writing, editing, fixing, or compiling OverPy (.opy) source for an Overwatch Workshop mode with the upstream `overpy` compiler, including rule and variable syntax, events and event variables, macros and includes, settings blocks, and reading compiler errors. Makes the agent compile after every change and look names up instead of guessing them.
+description: Use when writing, editing, fixing, or compiling OverPy (.opy) source for an Overwatch Workshop mode with the `overpy` compiler, including rule and variable syntax, events and event variables, macros and includes, settings blocks, and reading compiler errors. Makes the agent compile after every change and look names up instead of guessing them.
 license: AGPL-3.0
 ---
 
-# Write OverPy with the upstream compiler
+# Write OverPy with the `overpy` compiler
 
-OverPy is a Python-like language that compiles to Workshop script. The upstream compiler decides whether code is valid, so run it after every change and read its errors.
+OverPy is a Python-like language that compiles to Workshop script. The `overpy` compiler decides whether code is valid, so run it after every change and read its errors.
 
 ## Workflow
 

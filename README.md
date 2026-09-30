@@ -5,7 +5,7 @@ Optional [Agent Skills](https://agentskills.io) for Overwatch Workshop projects.
 | Skill | What it does |
 | --- | --- |
 | [`wright`](skills/wright/SKILL.md) | Helps a coding agent decide when and how to use [Wright](https://github.com/wrightkit/wright) in Workshop and OverPy projects. Wright owns the executable tools and semantic results, and works without this guide. [Install Wright](https://github.com/wrightkit/wright) separately. |
-| [`overpy`](skills/overpy/SKILL.md) | Teaches a coding agent to write OverPy and use the upstream `overpy` compiler: syntax, events, compiler errors and fixes. Every example compiles with `overpy@9.7.10`. Install the compiler with `npm install -g overpy`. |
+| [`overpy`](skills/overpy/SKILL.md) | Teaches a coding agent to write OverPy and use the `overpy` compiler: syntax, events, compiler errors and fixes. Every example compiles with `overpy@9.7.10`. Install the compiler with `npm install -g overpy`. |
 
 ## Install
 
