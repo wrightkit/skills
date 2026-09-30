@@ -1,6 +1,11 @@
-# Wright agent guide
+# WrightKit agent skills
 
-An optional [Agent Skill](https://agentskills.io) that helps a coding agent decide when and how to use [Wright](https://github.com/wrightkit/wright) in Overwatch Workshop and OverPy projects. The skill is [`wright`](skills/wright/SKILL.md): a short judgment guide, with language-specific notes loaded on demand. Wright owns the executable tools and semantic results, and works without this guide. [Install Wright](https://github.com/wrightkit/wright) separately.
+Optional [Agent Skills](https://agentskills.io) for Overwatch Workshop projects. Each works on its own.
+
+| Skill | What it does |
+| --- | --- |
+| [`wright`](skills/wright/SKILL.md) | Helps a coding agent decide when and how to use [Wright](https://github.com/wrightkit/wright) in Workshop and OverPy projects. Wright owns the executable tools and semantic results, and works without this guide. [Install Wright](https://github.com/wrightkit/wright) separately. |
+| [`overpy`](skills/overpy/SKILL.md) | Teaches a coding agent to write OverPy and use the `overpy` compiler: syntax, events, compiler errors and fixes. Every example compiles with `overpy@9.7.10`. Install the compiler with `npm install -g overpy`. |
 
 ## Install
 
@@ -18,6 +23,9 @@ npx skills add wrightkit/skills --list
 npx skills add wrightkit/skills -a claude-code
 npx skills add wrightkit/skills -g
 
+# one skill only
+npx skills add wrightkit/skills --skill overpy
+
 # update later
 npx skills update
 ```
@@ -26,12 +34,12 @@ Node is needed only to install; the skill has no runtime dependency.
 
 ### Manual install
 
-Copy the skill directory (`SKILL.md` and `references/`) into your agent's skills directory. For agents that use `.agents/skills`:
+Copy a skill directory (`SKILL.md` and `references/`) into your agent's skills directory. For agents that use `.agents/skills`:
 
 ```sh
 git clone https://github.com/wrightkit/skills.git
 mkdir -p <your-project>/.agents/skills
-cp -R skills/skills/wright <your-project>/.agents/skills/
+cp -R skills/skills/wright skills/skills/overpy <your-project>/.agents/skills/
 ```
 
 To update, replace that directory with the current one from this repository.
