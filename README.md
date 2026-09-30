@@ -14,7 +14,7 @@ mkdir -p <your-project>/.agents/skills
 cp -R skills/skills/wright <your-project>/.agents/skills/
 ```
 
-Replace the destination with your agent's documented skills directory if it differs. The installed `wright` directory needs only `SKILL.md`; Wright itself must be installed separately. To update a manual installation, replace that directory with the current one from this repository.
+Replace the destination with your agent's documented skills directory if it differs. The installed `wright` directory is self-contained (`SKILL.md` and `references/`); Wright itself must be installed separately. To update a manual installation, replace that directory with the current one from this repository.
 
 Generic Agent Skills installation is also available where the agent supports it:
 
