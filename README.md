@@ -46,6 +46,12 @@ To update, replace that directory with the current one from this repository.
 
 A first-party `wright agent install` is tracked in [Wright #415](https://github.com/wrightkit/wright/issues/415) and will be preferred once released.
 
+## Releases
+
+Releases are versioned for the repository as a whole (`vX.Y.Z`, 0.x until the guides stabilise), not per skill. [release-please](https://github.com/googleapis/release-please) keeps a Release PR open; merging it creates the tag and the GitHub Release with the changelog. Consumers such as Wright still pin an exact commit; the tag is the readable name for it.
+
+Pull request titles follow Conventional Commits and decide the bump. A change to what a skill tells the agent to do is `feat` or `fix`. `docs` and `chore` do not trigger a release.
+
 ## License
 
 [AGPL-3.0](LICENSE).
