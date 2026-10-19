@@ -1,0 +1,27 @@
+name: Release-please
+
+# release-please maintains the Release PR and, when it merges, creates the
+# vX.Y.Z tag and GitHub Release. The repository ships no binaries, so the
+# built-in GITHUB_TOKEN is enough: no downstream workflow has to start from
+# the tag or the Release PR.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: release-please
+  cancel-in-progress: false
+
+jobs:
+  release-please:
+    name: Maintain Release PR
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
