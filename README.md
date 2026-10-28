@@ -30,7 +30,7 @@ npx skills add wrightkit/skills --skill overpy
 npx skills update
 ```
 
-Node is needed only to install; the skill has no runtime dependency.
+Node is needed only for the Skills CLI. Each skill needs only the tool named in the table.
 
 ### Manual install
 
@@ -44,11 +44,13 @@ cp -R skills/skills/wright skills/skills/overpy <your-project>/.agents/skills/
 
 To update, replace that directory with the current one from this repository.
 
-A first-party `wright agent install` is tracked in [Wright #415](https://github.com/wrightkit/wright/issues/415) and will be preferred once released.
+### With Wright
+
+`wright agent install` installs the `wright` skill pinned by that Wright release into `.agents/skills/wright/`, with no Node and no network. `--mcp <harness>` also registers Wright's MCP server. It does not install `overpy`. See the [Wright CLI reference](https://github.com/wrightkit/wright/blob/main/docs/cli.md#wright-agent-install).
 
 ## Releases
 
-Releases are versioned for the repository as a whole (`vX.Y.Z`, 0.x until the guides stabilise), not per skill. [release-please](https://github.com/googleapis/release-please) keeps a Release PR open; merging it creates the tag and the GitHub Release with the changelog. Consumers such as Wright still pin an exact commit; the tag is the readable name for it.
+Releases are versioned for the repository as a whole (`vX.Y.Z`), not per skill. [release-please](https://github.com/googleapis/release-please) keeps a Release PR open; merging it creates the tag and the GitHub Release with the changelog. Consumers such as Wright still pin an exact commit; the tag is the readable name for it.
 
 Pull request titles follow Conventional Commits and decide the bump. A change to what a skill tells the agent to do is `feat` or `fix`. `docs` and `chore` do not trigger a release.
 
